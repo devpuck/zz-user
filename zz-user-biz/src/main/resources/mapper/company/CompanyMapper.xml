@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.mapper.company.CompanyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zz.model.entity.CompanyEntity">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="NAME" property="name"/>
+        <result column="INDUSTRY" property="industry"/>
+        <result column="SCORE" property="score"/>
+        <result column="SERVICE_MONEY" property="serviceMoney"/>
+        <result column="SERVICE_BEGIN_TIME" property="serviceBeginTime"/>
+        <result column="SERVICE_END_TIME" property="serviceEndTime"/>
+        <result column="LICENSE_NO" property="licenseNo"/>
+        <result column="LICENSE_STATUS" property="licenseStatus"/>
+        <result column="LICENSE_REFUSE_REASON" property="licenseRefuseReason"/>
+        <result column="LONGITUDE" property="longitude"/>
+        <result column="LATITUDE" property="latitude"/>
+        <result column="PHONE" property="phone"/>
+        <result column="BANK" property="bank"/>
+        <result column="BANK_NO" property="bankNo"/>
+        <result column="BANK_FILE" property="bankFile"/>
+        <result column="PLATFORM_KEY_ID" property="platformKeyId"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="LICENSE_PIC" property="licensePic"/>
+        <result column="LOGO" property="logo"/>
+        <result column="ADDRESS" property="address"/>
+        <result column="BRIEF_INTRODUCTION" property="briefIntroduction"/>
+        <result column="DETAILS_INTRODUCTION" property="detailsIntroduction"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BoResultMap" type="com.zz.model.bo.company.CompanyBo">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="NAME" property="name"/>
+        <result column="INDUSTRY" property="industry"/>
+        <result column="SCORE" property="score"/>
+        <result column="SERVICE_MONEY" property="serviceMoney"/>
+        <result column="SERVICE_BEGIN_TIME" property="serviceBeginTime"/>
+        <result column="SERVICE_END_TIME" property="serviceEndTime"/>
+        <result column="LICENSE_NO" property="licenseNo"/>
+        <result column="LICENSE_STATUS" property="licenseStatus"/>
+        <result column="LICENSE_REFUSE_REASON" property="licenseRefuseReason"/>
+        <result column="LONGITUDE" property="longitude"/>
+        <result column="LATITUDE" property="latitude"/>
+        <result column="PHONE" property="phone"/>
+        <result column="BANK" property="bank"/>
+        <result column="BANK_NO" property="bankNo"/>
+        <result column="BANK_FILE" property="bankFile"/>
+        <result column="PLATFORM_KEY_ID" property="platformKeyId"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="LICENSE_PIC" property="licensePic"/>
+        <result column="LOGO" property="logo"/>
+        <result column="ADDRESS" property="address"/>
+        <result column="BRIEF_INTRODUCTION" property="briefIntroduction"/>
+        <result column="DETAILS_INTRODUCTION" property="detailsIntroduction"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CREATED_BY,
+        CREATED_DATE,
+        LAST_UPDATED_BY,
+        LAST_UPDATED_DATE,
+        DELETED_BY,
+        DELETED_DATE,
+        IS_DELETED,
+        ID, NAME, INDUSTRY, SCORE, SERVICE_MONEY, SERVICE_BEGIN_TIME, SERVICE_END_TIME, LICENSE_NO, LICENSE_STATUS,
+        LICENSE_REFUSE_REASON, LONGITUDE, LATITUDE, PHONE, BANK, BANK_NO, BANK_FILE, PLATFORM_KEY_ID, KEY_ID,
+        LICENSE_PIC, LOGO, ADDRESS, BRIEF_INTRODUCTION, DETAILS_INTRODUCTION, STATUS
+    </sql>
+
+    <select id="getCompanyById" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from COMPANY where id = #{id}
+    </select>
+
+    <select id="getCompanyPageList" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from COMPANY
+    </select>
+
+</mapper>

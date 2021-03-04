@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.mapper.user.EmployeeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zz.model.entity.EmployeeEntity">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="DEPARTMENT_CODE" property="departmentCode"/>
+        <result column="LEADER_CODE" property="leaderCode"/>
+        <result column="WORK_CODE" property="workCode"/>
+        <result column="POSITION" property="position"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BoResultMap" type="com.zz.model.bo.user.EmployeeBo">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="DEPARTMENT_CODE" property="departmentCode"/>
+        <result column="LEADER_CODE" property="leaderCode"/>
+        <result column="WORK_CODE" property="workCode"/>
+        <result column="POSITION" property="position"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CREATED_BY,
+        CREATED_DATE,
+        LAST_UPDATED_BY,
+        LAST_UPDATED_DATE,
+        DELETED_BY,
+        DELETED_DATE,
+        IS_DELETED,
+        ID, USER_CODE, DEPARTMENT_CODE, LEADER_CODE, WORK_CODE, POSITION, KEY_ID, STATUS
+    </sql>
+
+    <select id="getEmployeeById" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from EMPLOYEE where id = #{id}
+    </select>
+
+    <select id="getEmployeePageList" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from EMPLOYEE
+    </select>
+
+</mapper>

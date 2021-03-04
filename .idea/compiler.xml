@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wms-__rootArtifactId__-api" />
+        <module name="wms-__rootArtifactId__-biz" />
+        <module name="zz-user-api" />
+        <module name="zz-user-biz" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wms-__rootArtifactId__-api" target="1.8" />
+      <module name="wms-__rootArtifactId__-biz" target="1.8" />
+      <module name="xac-shell" target="1.8" />
+      <module name="zz-user" target="1.8" />
+      <module name="zz-user-api" target="1.8" />
+      <module name="zz-user-biz" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="wms-__rootArtifactId__-api" options="-parameters" />
+      <module name="wms-__rootArtifactId__-biz" options="-parameters" />
+      <module name="zz-user" options="" />
+      <module name="zz-user-api" options="" />
+      <module name="zz-user-biz" options="" />
+    </option>
+  </component>
+</project>

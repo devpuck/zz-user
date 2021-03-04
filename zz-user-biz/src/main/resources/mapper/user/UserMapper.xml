@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.mapper.user.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zz.model.entity.UserEntity">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="CUSTOMER_LEVEL" property="customerLevel"/>
+        <result column="CUSTOMER_STATE" property="customerState"/>
+        <result column="SEX" property="sex"/>
+        <result column="USERNAME" property="username"/>
+        <result column="PHONE" property="phone"/>
+        <result column="EMAIL" property="email"/>
+        <result column="NICKNAME" property="nickname"/>
+        <result column="REALNAME" property="realname"/>
+        <result column="ADDRESS" property="address"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="CREATE_METHOD" property="createMethod"/>
+        <result column="COMPANY" property="company"/>
+        <result column="SOURCE_FROM" property="sourceFrom"/>
+        <result column="IDENTITY_CARD_CODE" property="identityCardCode"/>
+        <result column="IDENTITY_CARD_MAIN_PIC" property="identityCardMainPic"/>
+        <result column="IDENTITY_CARD_BACK_PIC" property="identityCardBackPic"/>
+        <result column="HEAD_PIC" property="headPic"/>
+        <result column="REMARKS" property="remarks"/>
+        <result column="INTRODUCE" property="introduce"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BoResultMap" type="com.zz.model.bo.user.UserBo">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="CUSTOMER_LEVEL" property="customerLevel"/>
+        <result column="CUSTOMER_STATE" property="customerState"/>
+        <result column="SEX" property="sex"/>
+        <result column="USERNAME" property="username"/>
+        <result column="PHONE" property="phone"/>
+        <result column="EMAIL" property="email"/>
+        <result column="NICKNAME" property="nickname"/>
+        <result column="REALNAME" property="realname"/>
+        <result column="ADDRESS" property="address"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="CREATE_METHOD" property="createMethod"/>
+        <result column="COMPANY" property="company"/>
+        <result column="SOURCE_FROM" property="sourceFrom"/>
+        <result column="IDENTITY_CARD_CODE" property="identityCardCode"/>
+        <result column="IDENTITY_CARD_MAIN_PIC" property="identityCardMainPic"/>
+        <result column="IDENTITY_CARD_BACK_PIC" property="identityCardBackPic"/>
+        <result column="HEAD_PIC" property="headPic"/>
+        <result column="REMARKS" property="remarks"/>
+        <result column="INTRODUCE" property="introduce"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CREATED_BY,
+        CREATED_DATE,
+        LAST_UPDATED_BY,
+        LAST_UPDATED_DATE,
+        DELETED_BY,
+        DELETED_DATE,
+        IS_DELETED,
+        ID, USER_CODE, CUSTOMER_LEVEL, CUSTOMER_STATE, SEX, USERNAME, PHONE, EMAIL, NICKNAME, REALNAME, ADDRESS, KEY_ID,
+        CREATE_METHOD, COMPANY, SOURCE_FROM, IDENTITY_CARD_CODE, IDENTITY_CARD_MAIN_PIC, IDENTITY_CARD_BACK_PIC,HEAD_PIC,
+        REMARKS, INTRODUCE, STATUS
+    </sql>
+
+    <select id="getUserById" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from USER where id = #{id}
+    </select>
+
+    <select id="getUserPageList" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from USER where IS_DELETED = 0
+        <if test="param.username != null">
+            and USERNAME = #{param.username}
+        </if>
+        <if test="param.phone != null">
+            and PHONE = #{param.phone}
+        </if>
+        <if test="param.email != null">
+            and EMAIL = #{param.email}
+        </if>
+        <if test="param.nickname != null">
+            and NICKNAME = #{param.nickname}
+        </if>
+        <if test="param.realname != null">
+            and REALNAME = #{param.realname}
+        </if>
+        <if test="param.address != null">
+            and ADDRESS = #{param.address}
+        </if>
+        <if test="param.keyId != null">
+            and KEY_ID = #{param.keyId}
+        </if>
+        <if test="param.createMethod != null">
+            and CREATE_METHOD = #{param.createMethod}
+        </if>
+        <if test="param.company != null">
+            and COMPANY = #{param.company}
+        </if>
+        <if test="param.identityCardCode != null">
+            and IDENTITY_CARD_CODE = #{param.identityCardCode}
+        </if>
+    </select>
+
+</mapper>

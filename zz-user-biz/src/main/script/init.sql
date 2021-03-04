@@ -1,0 +1,140 @@
+create database zz_keystone character set utf8;
+use zz_keystone;
+
+CREATE TABLE LOGIN
+(
+ID bigint NOT NULL AUTO_INCREMENT,
+USER_CODE     varchar(32) COMMENT '用户识别码，唯一校验，自动生成',
+USERNAME varchar(255) COMMENT '用户名',
+PASSWORD varchar(255) comment '密码',
+PHONE varchar(64) comment '手机号',
+EMAIL varchar(255) comment '邮箱',
+XCX_OPENID varchar(64) comment 'openid',
+APP_OPENID varchar(64) comment 'app_openid',
+GZH_OPENID varchar(64) comment 'gzh_openid',
+UNIONID varchar(64) comment 'unionid',
+THREE_PART_ID varchar(64) comment 'three_part_id',
+LOGIN_TYPE varchar(32) default 'saas' comment '登陆类型',
+ACCOUNT_TYPE varchar(32) default 'saas' comment '账号类型',
+KEY_ID varchar(64) comment '租户KEY',
+STATUS varchar(32) default 'ok' comment '状态，默认ok',
+CREATED_BY        varchar(32)  comment '创建人',
+CREATED_DATE      DATETIME comment '创建时间',
+LAST_UPDATED_BY   varchar(32) comment '最后更新人',
+LAST_UPDATED_DATE DATETIME comment '最后更新时间',
+DELETED_BY        varchar(32) comment '删除人',
+DELETED_DATE      DATETIME comment '删除时间',
+IS_DELETED        int(2)  default 0  comment '是否删除，0未删除，1已删除',
+PRIMARY KEY (ID)
+) COMMENT = '登陆信息';
+
+CREATE TABLE USER
+(
+ID bigint  NOT NULL AUTO_INCREMENT,
+USER_CODE     varchar(32) COMMENT '用户识别码，唯一校验，自动生成',
+CUSTOMER_LEVEL varchar(32) COMMENT '客户级别',
+CUSTOMER_STATE varchar(32) DEFAULT 'no' COMMENT '客户状态是否被领取',
+SEX varchar(16) COMMENT '性别',
+USERNAME varchar(255) COMMENT '用户名',
+PHONE varchar(64) comment '手机号',
+EMAIL varchar(255) comment '邮箱',
+NICKNAME varchar(255) comment '昵称',
+REALNAME varchar(64) comment '真实姓名',
+ADDRESS varchar(255) comment '地址',
+KEY_ID varchar(64) comment '租户ID',
+CREATE_METHOD varchar(255) DEFAULT 'online',
+COMPANY varchar(255) comment '公司',
+SOURCE_FROM varchar(64) comment '来源',
+IDENTITY_CARD_CODE varchar(64) comment '身份证号',
+IDENTITY_CARD_MAIN_PIC text comment '身份证照片正面',
+IDENTITY_CARD_BACK_PIC text comment '身份证照片正面',
+HEAD_PIC text comment '身份证照片正面',
+REMARKS text comment '备注',
+INTRODUCE text comment '简介，可用于个人主页等富文本边际',
+STATUS varchar(32) default 'ok' comment '状态，默认ok',
+CREATED_BY        varchar(32)  comment '创建人',
+CREATED_DATE      DATETIME comment '创建时间',
+LAST_UPDATED_BY   varchar(32) comment '最后更新人',
+LAST_UPDATED_DATE DATETIME comment '最后更新时间',
+DELETED_BY        varchar(32) comment '删除人',
+DELETED_DATE      DATETIME comment '删除时间',
+IS_DELETED        int(2)  default 0  comment '是否删除，0未删除，1已删除',
+PRIMARY KEY (ID)
+) COMMENT = '用户信息';
+
+CREATE TABLE COMPANY
+(
+ID bigint  NOT NULL AUTO_INCREMENT,
+NAME  varchar(255) comment '名称',
+INDUSTRY varchar(32) comment '行业',
+SCORE double DEFAULT '0'  comment '评分',
+SERVICE_MONEY double DEFAULT '0' comment '服务费',
+SERVICE_BEGIN_TIME DATETIME  comment '服务开始日期',
+SERVICE_END_TIME DATETIME comment '服务结束',
+LICENSE_NO  varchar(64) comment '营业执照',
+LICENSE_STATUS  varchar(32) comment '营业执照审批状态',
+LICENSE_REFUSE_REASON varchar(64) comment '营业执照审批失败原因',
+LONGITUDE varchar(32) comment '经度',
+LATITUDE varchar(32) comment '纬度',
+PHONE varchar(32) comment '纬度',
+BANK varchar(64) comment '开户行',
+BANK_NO varchar(64) comment '开户银行卡号',
+BANK_FILE text comment '开户许可证地址',
+PLATFORM_KEY_ID  varchar(64) comment '平台KEY ID，仅对平台下的租户',
+KEY_ID varchar(64) comment '租户ID',
+LICENSE_PIC  text comment '营业执照地址',
+LOGO     text comment 'logo',
+ADDRESS  text comment '地址',
+BRIEF_INTRODUCTION    text comment '简介',
+DETAILS_INTRODUCTION  text comment '详情',
+STATUS varchar(32) default 'ok' comment '状态，默认ok',
+CREATED_BY        varchar(32)  comment '创建人',
+CREATED_DATE      DATETIME comment '创建时间',
+LAST_UPDATED_BY   varchar(32) comment '最后更新人',
+LAST_UPDATED_DATE DATETIME comment '最后更新时间',
+DELETED_BY        varchar(32) comment '删除人',
+DELETED_DATE      DATETIME comment '删除时间',
+IS_DELETED        int(2)  default 0  comment '是否删除，0未删除，1已删除',
+PRIMARY KEY (ID)
+) COMMENT = '公司信息表';
+
+CREATE TABLE DEPARTMENT
+(
+ID bigint  NOT NULL AUTO_INCREMENT,
+NAME varchar(255) comment '名称',
+USER_NAMEE  varchar(32) comment '部门联系人或者负责人',
+USER_PHONE  varchar(32) comment '部门联系人或者负责人联系电话',
+DEPARTMENT_CODE  varchar(32) comment '部门编码',
+SUPERIOR_DEPARTMENT  varchar(32) comment '上级部门',
+INTRODUCE text  comment '简介',
+KEY_ID varchar(64) comment '租户ID',
+STATUS varchar(32) default 'ok' comment '状态，默认ok',
+CREATED_BY        varchar(32)  comment '创建人',
+CREATED_DATE      DATETIME comment '创建时间',
+LAST_UPDATED_BY   varchar(32) comment '最后更新人',
+LAST_UPDATED_DATE DATETIME comment '最后更新时间',
+DELETED_BY        varchar(32) comment '删除人',
+DELETED_DATE      DATETIME comment '删除时间',
+IS_DELETED        int(2)  default 0  comment '是否删除，0未删除，1已删除',
+PRIMARY KEY (ID)
+) COMMENT = '部门';
+
+CREATE TABLE EMPLOYEE
+(
+ID bigint  NOT NULL AUTO_INCREMENT,
+USER_CODE     varchar(32) COMMENT '用户识别码，唯一校验，自动生成',
+DEPARTMENT_CODE  varchar(32) comment '部门编码',
+LEADER_CODE  varchar(32) COMMENT '领导编号',
+WORK_CODE varchar(64) comment '工号',
+POSITION varchar(64) comment '职位',
+KEY_ID varchar(64) comment '租户ID',
+STATUS varchar(32) default 'ok' comment '状态，默认ok',
+CREATED_BY        varchar(32)  comment '创建人',
+CREATED_DATE      DATETIME comment '创建时间',
+LAST_UPDATED_BY   varchar(32) comment '最后更新人',
+LAST_UPDATED_DATE DATETIME comment '最后更新时间',
+DELETED_BY        varchar(32) comment '删除人',
+DELETED_DATE      DATETIME comment '删除时间',
+IS_DELETED        int(2)  default 0  comment '是否删除，0未删除，1已删除',
+PRIMARY KEY (ID)
+) COMMENT = '雇员';

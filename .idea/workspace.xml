@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d07a8a56-f750-4231-a03d-759d375a54af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../keystone/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/src/main/java/com/zz/KeystoneApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keystone/src/test/java/com/zz/KeystoneApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out-storage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/aspect/AspectSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/aspect/ControllerEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/aspect/ControllerEndpointAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/aspect/DataScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/dto/LogMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/DaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/SysLoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/VerificationCodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/exception/ZzException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/rabbitmq/AmqpClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/rabbitmq/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/service/impl/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/service/impl/LoginRedisServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zz-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zz-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/auth/JwtRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/auth/JwtRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/auth/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/auth/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/mybatis/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../zz-core/src/main/java/com/zz/core/mybatis/MybatisPlusConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IntelliJConfiguration">
+    <option name="PROPERTY_FILES">
+      <value>
+        <list size="0" />
+      </value>
+    </option>
+    <option name="REMOVE_NBSP" value="true" />
+    <option name="CREATE_NEW_JSP" value="true" />
+    <option name="KEY_RESOLUTION_TYPE" value="Use all words in label" />
+    <option name="PROMPT_FOR_KEY_PREFIX" value="false" />
+    <option name="LABEL_PART_1" value="&lt;bean:message key=&quot;" />
+    <option name="LABEL_PART_2" value="&quot;/&gt;" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="$USER_HOME$/Desktop/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n8uffR9t6KdkYxBzqTYsctEzpm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608103774886" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../昌飞项目/20200825_v1.0.0迭代/code/avic-device" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zz.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SpringBootPlusGenerator">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zz.Application" />
+      <module name="zz-user-biz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootPlusGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zz.util.SpringBootPlusGenerator" />
+      <module name="zz-user-biz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zz.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="zz-user-api" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="zz-user-api" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="wms-__rootArtifactId__-biz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wms.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XacAppliction" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="wms-__rootArtifactId__-biz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xac.XacApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringBootPlusGenerator" />
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d07a8a56-f750-4231-a03d-759d375a54af" name="Default Changelist" comment="" />
+      <created>1607932744465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607932744465</updated>
+      <workItem from="1607932748255" duration="4054000" />
+      <workItem from="1607937175992" duration="1382000" />
+      <workItem from="1607939413548" duration="1221000" />
+      <workItem from="1607995672760" duration="7949000" />
+      <workItem from="1608013560036" duration="955000" />
+      <workItem from="1608099615003" duration="4189000" />
+      <workItem from="1608110046926" duration="596000" />
+    </task>
+    <task id="LOCAL-00001" summary="脚手架代码">
+      <created>1607935825821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607935825821</updated>
+    </task>
+    <task id="LOCAL-00002" summary="脚手架代码版本号改成1.2">
+      <created>1608004549878</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608004549878</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="20346000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="脚手架代码" />
+    <MESSAGE value="脚手架代码版本号改成1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="脚手架代码版本号改成1.2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="266" y="169" key="#Console" timestamp="1610810248794">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="266" y="169" key="#Console/0.23.1440.838@0.23.1440.838" timestamp="1610810248794" />
+    <state x="2216" y="265" key="#com.intellij.ide.util.MemberChooser" timestamp="1614061134351">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2216" y="265" key="#com.intellij.ide.util.MemberChooser/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614061134351" />
+    <state x="2108" y="241" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610955355216">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2108" y="241" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1610955355216" />
+    <state x="501" y="196" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.838@0.23.1440.838" timestamp="1610875278957" />
+    <state width="1878" height="167" key="GridCell.Tab.0.bottom" timestamp="1614843870093">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="167" key="GridCell.Tab.0.bottom/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614838611584" />
+    <state width="1398" height="167" key="GridCell.Tab.0.bottom/0.23.1440.838@0.23.1440.838" timestamp="1614740938101" />
+    <state width="1878" height="167" key="GridCell.Tab.0.bottom/0.23.1440.839/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614843870093" />
+    <state width="1398" height="168" key="GridCell.Tab.0.bottom/0.23.1440.840/1440.23.1920.1057@0.23.1440.840" timestamp="1614690110301" />
+    <state width="1878" height="167" key="GridCell.Tab.0.bottom/0.23.1440.840/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614842843299" />
+    <state width="1878" height="215" key="GridCell.Tab.0.bottom/0.23.1440.841/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614676842804" />
+    <state width="1878" height="215" key="GridCell.Tab.0.bottom/0.23.1440.842/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614675636454" />
+    <state width="1398" height="220" key="GridCell.Tab.0.bottom/0.23.1440.844@0.23.1440.844" timestamp="1610783144540" />
+    <state width="1878" height="167" key="GridCell.Tab.0.center" timestamp="1614843870092">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="167" key="GridCell.Tab.0.center/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614838611582" />
+    <state width="1398" height="167" key="GridCell.Tab.0.center/0.23.1440.838@0.23.1440.838" timestamp="1614740938100" />
+    <state width="1878" height="167" key="GridCell.Tab.0.center/0.23.1440.839/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614843870092" />
+    <state width="1398" height="168" key="GridCell.Tab.0.center/0.23.1440.840/1440.23.1920.1057@0.23.1440.840" timestamp="1614690110300" />
+    <state width="1878" height="167" key="GridCell.Tab.0.center/0.23.1440.840/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614842843296" />
+    <state width="1878" height="215" key="GridCell.Tab.0.center/0.23.1440.841/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614676842803" />
+    <state width="1878" height="215" key="GridCell.Tab.0.center/0.23.1440.842/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614675636450" />
+    <state width="1398" height="220" key="GridCell.Tab.0.center/0.23.1440.844@0.23.1440.844" timestamp="1610783144539" />
+    <state width="1878" height="167" key="GridCell.Tab.0.left" timestamp="1614843870091">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="167" key="GridCell.Tab.0.left/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614838611581" />
+    <state width="1398" height="167" key="GridCell.Tab.0.left/0.23.1440.838@0.23.1440.838" timestamp="1614740938100" />
+    <state width="1878" height="167" key="GridCell.Tab.0.left/0.23.1440.839/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614843870091" />
+    <state width="1398" height="168" key="GridCell.Tab.0.left/0.23.1440.840/1440.23.1920.1057@0.23.1440.840" timestamp="1614690110298" />
+    <state width="1878" height="167" key="GridCell.Tab.0.left/0.23.1440.840/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614842843295" />
+    <state width="1878" height="215" key="GridCell.Tab.0.left/0.23.1440.841/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614676842802" />
+    <state width="1878" height="215" key="GridCell.Tab.0.left/0.23.1440.842/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614675636448" />
+    <state width="1398" height="220" key="GridCell.Tab.0.left/0.23.1440.844@0.23.1440.844" timestamp="1610783144539" />
+    <state width="1878" height="167" key="GridCell.Tab.0.right" timestamp="1614843870092">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="167" key="GridCell.Tab.0.right/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614838611583" />
+    <state width="1398" height="167" key="GridCell.Tab.0.right/0.23.1440.838@0.23.1440.838" timestamp="1614740938101" />
+    <state width="1878" height="167" key="GridCell.Tab.0.right/0.23.1440.839/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614843870092" />
+    <state width="1398" height="168" key="GridCell.Tab.0.right/0.23.1440.840/1440.23.1920.1057@0.23.1440.840" timestamp="1614690110301" />
+    <state width="1878" height="167" key="GridCell.Tab.0.right/0.23.1440.840/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614842843297" />
+    <state width="1878" height="215" key="GridCell.Tab.0.right/0.23.1440.841/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614676842804" />
+    <state width="1878" height="215" key="GridCell.Tab.0.right/0.23.1440.842/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614675636453" />
+    <state width="1398" height="220" key="GridCell.Tab.0.right/0.23.1440.844@0.23.1440.844" timestamp="1610783144540" />
+    <state width="1398" height="270" key="GridCell.Tab.1.bottom" timestamp="1611057124769">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1398" height="270" key="GridCell.Tab.1.bottom/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1611057124769" />
+    <state width="1398" height="270" key="GridCell.Tab.1.bottom/0.23.1440.838@0.23.1440.838" timestamp="1610862651477" />
+    <state width="1398" height="270" key="GridCell.Tab.1.center" timestamp="1611057124768">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1398" height="270" key="GridCell.Tab.1.center/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1611057124768" />
+    <state width="1398" height="270" key="GridCell.Tab.1.center/0.23.1440.838@0.23.1440.838" timestamp="1610862651476" />
+    <state width="1398" height="270" key="GridCell.Tab.1.left" timestamp="1611057124768">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1398" height="270" key="GridCell.Tab.1.left/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1611057124768" />
+    <state width="1398" height="270" key="GridCell.Tab.1.left/0.23.1440.838@0.23.1440.838" timestamp="1610862651475" />
+    <state width="1398" height="270" key="GridCell.Tab.1.right" timestamp="1611057124769">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1398" height="270" key="GridCell.Tab.1.right/0.23.1440.838/1440.23.1920.1057@1440.23.1920.1057" timestamp="1611057124769" />
+    <state width="1398" height="270" key="GridCell.Tab.1.right/0.23.1440.838@0.23.1440.838" timestamp="1610862651477" />
+    <state x="258" y="104" key="Maven.ArtifactSearchDialog" timestamp="1610803606623">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="258" y="104" key="Maven.ArtifactSearchDialog/0.23.1440.838@0.23.1440.838" timestamp="1610803606623" />
+    <state x="1792" y="96" key="SettingsEditor" timestamp="1614843887625">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="264" y="81" key="SettingsEditor/0.23.1440.838@0.23.1440.838" timestamp="1610804874163" />
+    <state x="1792" y="96" key="SettingsEditor/0.23.1440.839/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614843887625" />
+    <state x="1793" y="214" key="new project wizard" timestamp="1614672818725">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1793" y="214" key="new project wizard/0.23.1440.841/1440.23.1920.1057@1440.23.1920.1057" timestamp="1614672818725" />
+    <state x="385" y="185" key="search.everywhere.popup" timestamp="1610816696275">
+      <screen x="0" y="23" width="1440" height="838" />
+    </state>
+    <state x="385" y="185" key="search.everywhere.popup/0.23.1440.838@0.23.1440.838" timestamp="1610816696275" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

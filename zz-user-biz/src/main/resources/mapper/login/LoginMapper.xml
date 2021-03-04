@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.mapper.login.LoginMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zz.model.entity.LoginEntity">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="USERNAME" property="username"/>
+        <result column="PASSWORD" property="password"/>
+        <result column="PHONE" property="phone"/>
+        <result column="EMAIL" property="email"/>
+        <result column="XCX_OPENID" property="xcxOpenid"/>
+        <result column="APP_OPENID" property="appOpenid"/>
+        <result column="GZH_OPENID" property="gzhOpenid"/>
+        <result column="UNIONID" property="unionid"/>
+        <result column="THREE_PART_ID" property="threePartId"/>
+        <result column="LOGIN_TYPE" property="loginType"/>
+        <result column="ACCOUNT_TYPE" property="accountType"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BoResultMap" type="com.zz.model.bo.login.LoginBo">
+        <id column="ID" property="id"/>
+        <result column="CREATED_BY" property="createdBy"/>
+        <result column="CREATED_DATE" property="createdDate"/>
+        <result column="LAST_UPDATED_BY" property="lastUpdatedBy"/>
+        <result column="LAST_UPDATED_DATE" property="lastUpdatedDate"/>
+        <result column="DELETED_BY" property="deletedBy"/>
+        <result column="DELETED_DATE" property="deletedDate"/>
+        <result column="IS_DELETED" property="isDeleted"/>
+        <result column="USER_CODE" property="userCode"/>
+        <result column="USERNAME" property="username"/>
+        <result column="PASSWORD" property="password"/>
+        <result column="PHONE" property="phone"/>
+        <result column="EMAIL" property="email"/>
+        <result column="XCX_OPENID" property="xcxOpenid"/>
+        <result column="APP_OPENID" property="appOpenid"/>
+        <result column="GZH_OPENID" property="gzhOpenid"/>
+        <result column="UNIONID" property="unionid"/>
+        <result column="THREE_PART_ID" property="threePartId"/>
+        <result column="LOGIN_TYPE" property="loginType"/>
+        <result column="ACCOUNT_TYPE" property="accountType"/>
+        <result column="KEY_ID" property="keyId"/>
+        <result column="STATUS" property="status"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CREATED_BY,
+        CREATED_DATE,
+        LAST_UPDATED_BY,
+        LAST_UPDATED_DATE,
+        DELETED_BY,
+        DELETED_DATE,
+        IS_DELETED,
+        ID, USER_CODE, USERNAME, PASSWORD, PHONE, EMAIL, XCX_OPENID, APP_OPENID, GZH_OPENID, UNIONID, THREE_PART_ID,
+        LOGIN_TYPE, ACCOUNT_TYPE, KEY_ID, STATUS
+    </sql>
+    <update id="updatePassword">
+        update LOGIN set PASSWORD = #{password} where ID = #{id}
+    </update>
+    <update id="updateEmail">
+        update LOGIN set EMAIL = #{email} where ID = #{id}
+    </update>
+    <update id="updatePhone">
+        update LOGIN set PHONE = #{phone} where ID = #{id}
+    </update>
+    <update id="updateUserName">
+        update LOGIN set USERNAME = #{userName} where ID = #{id}
+    </update>
+
+    <select id="getLoginById" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from LOGIN where id = #{id}
+    </select>
+
+    <select id="getLoginPageList" resultMap="BoResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from LOGIN
+    </select>
+    <select id="checkPhoneExist" resultType="java.lang.Long">
+        select ID from LOGIN where (PHONE = #{phone} or USERNAME = #{phone}) and IS_DELETED = 0
+    </select>
+    <select id="checkEmailExist" resultType="java.lang.Long">
+        select ID from LOGIN where (EMAIL = #{email} or USERNAME = #{email}) and IS_DELETED = 0
+    </select>
+    <select id="checkUserNameExist" resultType="java.lang.Long">
+        select ID from LOGIN where (EMAIL = #{userName} or USERNAME = #{userName} or PHONE = #{userName}) and IS_DELETED
+        = 0
+    </select>
+
+
+</mapper>
